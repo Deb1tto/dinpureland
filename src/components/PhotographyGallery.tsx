@@ -75,7 +75,7 @@ export function PhotographyGallery() {
                     <p className="mt-2 text-[11px] uppercase tracking-[0.2em] text-[var(--color-ash)]">
                       {photo.location} / {photo.date}
                     </p>
-                    <p className="mt-4 text-sm font-light leading-7 tracking-[0.05em] text-[var(--color-muted)]">
+                    <p className="photo-card-description mt-4 text-sm font-light leading-7 tracking-[0.05em] text-[var(--color-muted)]">
                       {photo.description}
                     </p>
                   </div>
@@ -119,7 +119,7 @@ export function PhotographyGallery() {
                 <p className="mt-4 text-[11px] uppercase tracking-[0.2em] text-[var(--color-ash)]">
                   {selectedPhoto.location} / {selectedPhoto.date}
                 </p>
-                <p className="mt-10 border-t hairline pt-5 text-sm font-light leading-8 tracking-[0.05em] text-[var(--color-muted)]">
+                <p className="mt-10 whitespace-pre-line break-words border-t hairline pt-5 text-sm font-light leading-8 tracking-[0.05em] text-[var(--color-muted)]">
                   {selectedPhoto.note}
                 </p>
               </div>

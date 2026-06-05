@@ -1,3 +1,5 @@
+import photoData from "./photos.json";
+
 export type PhotoEntry = {
   id: string;
   title: string;
@@ -9,25 +11,19 @@ export type PhotoEntry = {
   note: string;
 };
 
-export const photos: PhotoEntry[] = [
-  {
-    id: "kinkakuji-2025-12-17",
-    title: "Photo Study 01",
-    date: "2025.12.17",
-    location: "Kyoto / Placeholder",
-    image: "/photos/kinkakuji-2025-12-17.jpg",
-    orientation: "portrait",
-    description: "Short photo description placeholder.",
-    note: "Personal note placeholder. Write the memory, atmosphere, or reason this frame stayed with you.",
-  },
-  {
-    id: "lanterns-2025-12-16",
-    title: "Photo Study 02",
-    date: "2025.12.16",
-    location: "Kyoto / Placeholder",
-    image: "/photos/lanterns-2025-12-16.jpg",
-    orientation: "landscape",
-    description: "Short photo description placeholder.",
-    note: "Personal note placeholder. Add a quiet reflection, travel context, or visual observation here.",
-  },
-];
+function normalizePhoto(photo: Partial<PhotoEntry>, index: number): PhotoEntry {
+  return {
+    id: photo.id || `photo-${String(index + 1).padStart(3, "0")}`,
+    title: photo.title || `Photo Study ${String(index + 1).padStart(2, "0")}`,
+    date: photo.date || "Undated",
+    location: photo.location || "Location placeholder",
+    image: photo.image || "/photos/placeholder.jpg",
+    orientation: photo.orientation === "landscape" ? "landscape" : "portrait",
+    description: photo.description || "Short photo description placeholder.",
+    note:
+      photo.note ||
+      "Personal note placeholder. Write the memory, atmosphere, or reason this frame stayed with you.",
+  };
+}
+
+export const photos: PhotoEntry[] = (photoData as Partial<PhotoEntry>[]).map(normalizePhoto);
