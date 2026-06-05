@@ -1,17 +1,4 @@
-const books = [
-  {
-    number: "01",
-    title: "金阁寺",
-    author: "三岛由纪夫",
-    note: "Short review placeholder.",
-  },
-  {
-    number: "02",
-    title: "禁色",
-    author: "三岛由纪夫",
-    note: "Short review placeholder.",
-  },
-];
+import books from "@/data/books.json";
 
 export function LiteraturePreview() {
   return (
