@@ -1,33 +1,45 @@
 import { SectionHeader } from "./SectionHeader";
 
-const links = ["Email", "GitHub", "LinkedIn", "Resume"];
+const links = [
+  {
+    label: "Email",
+    value: "pengyu_chen@ucsb.edu",
+    href: "mailto:pengyu_chen@ucsb.edu",
+  },
+  {
+    label: "Phone",
+    value: "805 722 6572",
+    href: "tel:+18057226572",
+  },
+  {
+    label: "GitHub",
+    value: "github.com/Deb1tto",
+    href: "https://github.com/Deb1tto",
+  },
+];
 
 export function Contact() {
   return (
     <section id="contact" className="px-4 pb-10 pt-20 sm:px-6 lg:px-8">
       <div className="section-shell">
         <SectionHeader number="07" title="Contact" label="設計 / Connect" />
-        <div className="grid gap-12 border-b hairline pb-24 md:grid-cols-[1fr_1fr]">
-          <p className="max-w-xl font-serif text-4xl font-normal leading-[1.28] tracking-[0.03em] md:text-6xl">
-            Contact placeholder for future collaborations and conversations.
-          </p>
-          <div className="self-end border-t hairline">
+        <div className="border-b hairline pb-24">
+          <div className="ml-auto max-w-3xl border-t hairline">
             {links.map((link) => (
               <a
-                key={link}
-                href="#"
-                className="quiet-hover flex items-center justify-between border-b hairline py-5 text-sm uppercase tracking-[0.18em] text-[var(--color-muted)]"
+                key={link.label}
+                href={link.href}
+                className="quiet-hover grid gap-3 border-b hairline py-5 text-sm text-[var(--color-muted)] sm:grid-cols-[8rem_1fr_2rem] sm:items-center"
               >
-                <span>{link}</span>
+                <span className="text-[11px] uppercase tracking-[0.22em] text-[var(--color-ash)]">
+                  {link.label}
+                </span>
+                <span className="break-words font-light tracking-[0.05em]">{link.value}</span>
                 <span className="font-serif text-xl text-[var(--color-sage)]">↗</span>
               </a>
             ))}
           </div>
         </div>
-        <footer className="flex flex-col gap-3 py-8 text-[11px] uppercase tracking-[0.22em] text-[var(--color-ash)] sm:flex-row sm:items-center sm:justify-between">
-          <span>Personal portfolio prototype</span>
-          <span>Warm ivory / paper / thin line</span>
-        </footer>
       </div>
     </section>
   );

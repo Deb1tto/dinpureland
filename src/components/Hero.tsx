@@ -5,7 +5,8 @@ const navItems = [
   ["Works", "/works"],
   ["Photography", "/photography"],
   ["Hobbies", "/hobbies"],
-  ["Index", "/index"],
+  ["Literature", "/literature"],
+  ["Index", "/contents"],
   ["Contact", "/contact"],
 ];
 
@@ -15,7 +16,7 @@ export function Hero() {
       <div className="section-shell">
         <header className="fade-up flex items-center justify-between border-b hairline pb-5 text-[11px] uppercase tracking-[0.2em] text-[var(--color-muted)]">
           <span className="h-px w-10 bg-[var(--line-soft)]" aria-hidden="true" />
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center gap-5 md:flex lg:gap-8">
             {navItems.map(([label, href]) => (
               <Link key={href} href={href} className="transition-opacity hover:opacity-55">
                 {label}
@@ -28,7 +29,9 @@ export function Hero() {
         <div className="grid min-h-[calc(100vh-100px)] grid-cols-1 gap-14 py-16 md:grid-cols-[1.08fr_0.92fr] md:items-center md:py-20">
           <div className="fade-up fade-up-delay-1 max-w-3xl">
             <p className="mb-8 max-w-xs border-l hairline pl-4 text-xs leading-6 tracking-[0.18em] text-[var(--color-muted)]">
-              Pengyu Chen / 20 / Computer Science student at UCSB.
+              Pengyu Chen / 20
+              <br />
+              Computer Science student at UCSB.
             </p>
             <h1 className="hero-mark text-[clamp(5.4rem,14vw,11.5rem)] font-normal leading-[0.9] tracking-[0.02em] text-[rgba(36,35,31,0.72)]">
               陳

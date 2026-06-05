@@ -4,6 +4,7 @@ export const routeOrder = [
   "/works",
   "/photography",
   "/hobbies",
+  "/literature",
   "/contents",
   "/contact",
 ] as const;

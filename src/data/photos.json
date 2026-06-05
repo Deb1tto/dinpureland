@@ -1,22 +1,32 @@
 [
   {
     "id": "kinkakuji-2025-12-17",
-    "title": "Photo Study 01",
+    "title": "金阁寺",
     "date": "2025.12.17",
-    "location": "Kyoto / Placeholder",
+    "location": "Kyoto",
     "image": "/photos/kinkakuji-2025-12-17.jpg",
     "orientation": "portrait",
-    "description": "Short photo description placeholder.",
-    "note": "Personal note placeholder. Write the memory, atmosphere, or reason this frame stayed with you."
+    "description": "那天是在京都的最后一天，金阁下了一场大雨",
+    "note": "那天是在京都的最后一天，金阁下了一场大雨，谢谢京都这次安静的陪伴"
   },
   {
     "id": "lanterns-2025-12-16",
-    "title": "Photo Study 02",
+    "title": "八坂神社",
     "date": "2025.12.16",
-    "location": "Kyoto / Placeholder",
+    "location": "Kyoto",
     "image": "/photos/lanterns-2025-12-16.jpg",
     "orientation": "landscape",
-    "description": "Short photo description placeholder.",
-    "note": "Personal note placeholder. Add a quiet reflection, travel context, or visual observation here."
+    "description": "在八坂神社的夜晚，灯火照亮了夜晚的梦",
+    "note": "沿着四条一直走就是衹园，再往前走穿过鸭川就是八坂神社"
+  },
+  {
+    "id": "santa-barbara-clouds-2026-04-25",
+    "title": "Santa Barbara",
+    "date": "2026.04.25",
+    "location": "Santa Barbara",
+    "image": "/photos/santa-barbara-clouds-2026-04-25.jpg",
+    "orientation": "landscape",
+    "description": "俯瞰圣芭芭拉",
+    "note": "在dt的山上，那天在看Charlieputh的演唱会"
   }
 ]

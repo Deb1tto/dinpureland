@@ -31,17 +31,7 @@ export function PhotographyGallery() {
       <div className="section-shell">
         <SectionHeader number="03" title="Photography" label="記憶 / Frames" />
 
-        <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
-          <div className="border-t hairline pt-5">
-            <p className="max-w-sm font-serif text-3xl font-normal leading-[1.38] tracking-[0.03em] text-[var(--color-charcoal)] md:text-5xl">
-              A quiet image archive for memory, place, and small observations.
-            </p>
-            <p className="mt-8 max-w-xs text-sm font-light leading-8 tracking-[0.05em] text-[var(--color-muted)]">
-              每次更新时，把照片放入 public/photos，再在 src/data/photos.ts 里追加一条记录即可。
-            </p>
-          </div>
-
-          <div className="grid gap-7 md:grid-cols-2">
+        <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
             {photos.map((photo, index) => (
               <button
                 key={photo.id}
@@ -82,7 +72,6 @@ export function PhotographyGallery() {
                 </div>
               </button>
             ))}
-          </div>
         </div>
       </div>
 
