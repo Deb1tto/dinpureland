@@ -1,14 +1,6 @@
 import Link from "next/link";
-
-const navItems = [
-  ["Profile", "/profile"],
-  ["Works", "/works"],
-  ["Photography", "/photography"],
-  ["Hobbies", "/hobbies"],
-  ["Literature", "/literature"],
-  ["Index", "/contents"],
-  ["Contact", "/contact"],
-];
+import { MobileNav } from "@/components/MobileNav";
+import { mainNavItems } from "@/lib/navigation";
 
 export function Hero() {
   return (
@@ -17,12 +9,13 @@ export function Hero() {
         <header className="fade-up flex items-center justify-between border-b hairline pb-5 text-[11px] uppercase tracking-[0.2em] text-[var(--color-muted)]">
           <span className="h-px w-10 bg-[var(--line-soft)]" aria-hidden="true" />
           <nav className="hidden items-center gap-5 md:flex lg:gap-8">
-            {navItems.map(([label, href]) => (
+            {mainNavItems.map(([label, href]) => (
               <Link key={href} href={href} className="transition-opacity hover:opacity-55">
                 {label}
               </Link>
             ))}
           </nav>
+          <MobileNav items={mainNavItems} />
           <span className="h-px w-10 bg-[var(--line-soft)]" aria-hidden="true" />
         </header>
 
